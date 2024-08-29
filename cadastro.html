@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro usuário</title>
+<style> 
+    body {
+        background-color: #fde6cc;
+        color: #333333;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1 {
+        color: #ff6f61;
+        font-size: 3em;
+        text-align: center;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    div {
+        padding: 20px;
+        max-width: 90vw;
+        width: 470px;
+        margin: auto;
+        border-radius: 15px;
+        background-color: #fff8e7;
+        border: 1px solid #ff6f61;
+        box-shadow: 5px 5px 5px #ff6e617a;
+    }
+    p {
+        color: #ff6f61;
+        font-size: 1.1em;
+    }
+    label {
+        font-size: 1.1em;
+        margin-left: 2.5%;
+        color: #ff6f61;
+    }
+    .text,
+    #textArea {
+        display: block;
+        margin: auto;
+        width: 95%;
+        border-radius: 10px;
+        height: 30px;
+        padding-left: 5px;
+        border: 1px solid #ff6f61;
+        background-color: #fff8e7;
+        color: #ff6f61;
+    }
+    #textArea {
+        height: 100px;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+        height: 20px;
+        width: 20px;
+    }
+    #env {
+        background-color: #ffcb52;
+        border: 1px solid #ffd166;
+        color: #ffffff;
+        font-weight: 800;
+        font-size: 1.1em;
+        border-radius: 10px;
+        display: block;
+        margin: auto;
+        width: 95%;
+        height: 50px;
+        border: none;
+        cursor: pointer;
+    }
+    #env:hover {
+        background-color: #ffb703;
+    }
+    #voltar {
+        background-color: #ffcb52;
+        border: 1px solid #ffd166;
+        color: #ffffff;
+        font-weight: 800;
+        font-size: 1.1em;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 40px;
+        max-width: 90vw;
+        width: 470px;
+        height: 50px;
+        border: none;
+        cursor: pointer;
+    }
+    #voltar:hover {
+        background-color: #ffb703;
+    }
+</style>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <div>
+        <form action="cadastro.php" method="post">
+            <p>
+                <label for="inome">Nome:</label>
+                <input class="text" type="text" name="nome" id="inome">
+            </p>
+            <p>
+                <label for="itelefone">Telefone:</label>
+                <input class="text" type="text" name="telefone" id="itelefone">
+            </p>
+            <p>
+                <label for="idataNasc">Data de nascimento:</label>
+                <input class="text" type="date" name="dataNasc" id="idataNasc">
+            </p>
+            <p>
+                <label for="icidade">Cidade:</label>
+                <input class="text" type="text" name="cidade" id="icidade">
+            </p>
+            <br>
+            <p>
+                <p>Genero:</p>
+                <span>
+                    <input type="radio" name="opcao" id="iop1" value="F">
+                    <label for="iop1">Feminino</label>
+                </span>
+                <span>
+                    <input type="radio" name="opcao" id="iop2" value="M">
+                    <label for="iop2">Masculino</label>
+                </span>
+                <span>
+                    <input type="radio" name="opcao" id="iop3" value="O">
+                    <label for="iop3">Prefiro não informar</label>
+                </span>
+            </p>
+            <br>
+            <p>
+                <p>Interesses:</p>
+                <span>
+                    <input type="checkbox" name="opcb1" id="iopcb1" value="ESP">
+                    <label for="iopcb1">Esportes</label><br>
+                </span>
+                <span>
+                    <input type="checkbox" name="opcb2" id="iopcb2" value="JOG">
+                    <label for="iopcb2">Jogos</label><br>
+                </span>
+                <span>
+                    <input type="checkbox" name="opcb3" id="iopcb3" value="FIL">
+                    <label for="iopcb3">Filmes</label><br>
+                </span>
+                <span>
+                    <input type="checkbox" name="opcb4" id="iopcb4" value="GAS">
+                    <label for="iopcb4">Gastronomia</label><br>
+                </span>
+                <span>
+                    <input type="checkbox" name="opcb5" id="iopcb5" value="TEC">
+                    <label for="iopcb5">Tecnologia</label><br>
+                </span>
+            </p>
+            <br>
+            <p>    
+                <p>Observação:</p>
+                <input id="textArea" type="textarea" name="obs" id="iobs" cols="6" rows="6">
+            </p>
+            <p>
+                <input id="env" type="submit" value="Cadastrar">
+            </p>
+        </form>
+    </div>
+    <a href="index.html"><span id="voltar">Voltar</span></a>
+</body>
+</html>
